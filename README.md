@@ -30,7 +30,7 @@ Prerequisites
 
     Maven 3.8+
 
-###Running Locally
+### Running Locally
 1. Change configuration properties to use localhost
 
 2. Build and Run Services
@@ -59,7 +59,7 @@ bash
 cd userservice
 mvn spring-boot:run
 
-###Running with Docker
+### Running with Docker
 1. Update config properties, both on GitHub repository for config server, and in each application properties for the microservices
 
 2. Build and start all services:
@@ -72,7 +72,7 @@ docker run -p 8080:8080 app-name
 
 For each microservice, changing the port
 
-###Service Ports
+### Service Ports
 
 Service	Port
 
@@ -89,11 +89,11 @@ Order Service	8082
 Payment Service	8083
 
 
-###API Documentation
+# API Documentation
 
-##User Service Endpoints
+## User Service Endpoints
 
-#Authentication
+## Authentication
 
     POST /api/auth/login - User login
 Body:
@@ -121,7 +121,7 @@ Body:
 }
 
 
-#Products (Public)
+## Products (Public)
 
     GET /api/products/list - List all products
 
@@ -131,7 +131,7 @@ Body:
 
     GET /api/products/category/{category} - List products from a category
 
-#User Operations
+## User Operations
 
     GET /api/users/info - Get user info
 
@@ -175,7 +175,7 @@ Body:
 
     PUT /api/users/rejected-payment/{id} method to simulate the rejection of a payment
 
-#Admin Operations
+## Admin Operations
 
     DELETE /api/admin/delete/{id} - Delete user
 
@@ -206,10 +206,10 @@ For User and Admin operations, include in authorization the bearer token generat
 Limit service for resetpwd 3 resets per 5 minutes, and for login 5 logins per 5 minutes
 
 
-Configurations
+# Configurations
 
 
-orderservice.properties
+## orderservice.properties
 
 spring.application.name=orderservice
 
@@ -240,7 +240,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 #eureka.client.service-url.defaultZone=http://host.docker.internal:8761/eureka
 
 
-paymentservice.properties
+## paymentservice.properties
 
 spring.application.name=paymentservice
 
@@ -271,7 +271,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 #eureka.client.service-url.defaultZone=http://host.docker.internal:8761/eureka
 
 
-productservice.properties
+## productservice.properties
 
 spring.application.name=productservice
 
@@ -302,7 +302,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 #eureka.client.service-url.defaultZone=http://host.docker.internal:8761/eureka
 
 
-registryservice.properties
+## registryservice.properties
 
 spring.application.name=registryservice
 
@@ -313,7 +313,7 @@ eureka.client.register-with-eureka= false
 eureka.client.fetch-registry= false
 
 
-userservice.properties
+## userservice.properties
 
 spring.application.name=userservice
 
@@ -337,7 +337,7 @@ logging.level.root=INFO
 
 logging.file.name=logs/demo-application-dev.log
 
-# JWT Configuration
+#JWT Configuration
 
 jwt.secret=YXjxxVVRZbVb47jWEdAVuZS15rQTziuo #Create a key to generate JWT tokens
 
@@ -366,7 +366,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 #eureka.client.service-url.defaultZone=http://host.docker.internal:8761/eureka
 
 
-config server properties
+## config server properties
 
 spring.application.name=config-server
 
