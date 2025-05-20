@@ -3,7 +3,6 @@ E-Commerce Microservices Platform
 This project is a microservices-based e-commerce platform built with Spring Boot and Spring Cloud. It consists of multiple services working together to provide a complete shopping experience.
 Architecture Overview
 
-Architecture Diagram (Placeholder for actual diagram)
 Services
 
     User Service - Gateway service handling authentication, user management, and routing
